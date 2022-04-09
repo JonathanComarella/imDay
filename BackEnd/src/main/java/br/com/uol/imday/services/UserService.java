@@ -19,7 +19,6 @@ public class UserService {
     private UserRepository userRepository;
 
     public List<UserDTO> findAll() {
-        List<User> user = userRepository.findAll();
         return userRepository.findAll().stream().map(x -> new UserDTO(x)).toList();
     }
 
@@ -46,6 +45,7 @@ public class UserService {
         }
         return userDaysList;
     }
+
     private boolean isWeekend(LocalDate date) {
         DayOfWeek day = date.getDayOfWeek();
         return day.equals(DayOfWeek.SATURDAY) || day.equals(DayOfWeek.SUNDAY);

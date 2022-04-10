@@ -36,7 +36,7 @@ public class UserService {
                 userCounter = userCounter + 1;
             }
 
-            userDay.setDate(date);
+            userDay.setDate(String.valueOf(date));
             userDaysList.add(userDay);
             date = date.plusDays(1);
             if (userCounter >= usersList.size()) {

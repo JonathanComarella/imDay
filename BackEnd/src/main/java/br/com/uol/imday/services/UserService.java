@@ -36,6 +36,8 @@ public class UserService {
                 UserDTO user = usersList.get(userCounter);
                 userDay.setNameUser(user.getName());
                 userCounter = userCounter + 1;
+            } else {
+                userDay.setNameUser("Sem Resolvedor");
             }
 
             DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");

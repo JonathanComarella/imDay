@@ -25,6 +25,6 @@ public class ImDayController {
 
     @GetMapping("/docs")
     public void docs(HttpServletResponse response) throws IOException {
-        response.sendRedirect("https://jonathan-imday.herokuapp.com/swagger-ui/index.html");
+        response.sendRedirect("http://localhost:8080/swagger-ui/index.html");
     }
 }

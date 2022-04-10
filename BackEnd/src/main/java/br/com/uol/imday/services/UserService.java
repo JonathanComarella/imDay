@@ -7,8 +7,10 @@ import br.com.uol.imday.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +38,8 @@ public class UserService {
                 userCounter = userCounter + 1;
             }
 
-            userDay.setDate(String.valueOf(date));
+            DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+            userDay.setDate(date.format(dateFormatter));
             userDaysList.add(userDay);
             date = date.plusDays(1);
             if (userCounter >= usersList.size()) {

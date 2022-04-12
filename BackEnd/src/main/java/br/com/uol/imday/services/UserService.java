@@ -2,12 +2,10 @@ package br.com.uol.imday.services;
 
 import br.com.uol.imday.dto.SolversDaysDTO;
 import br.com.uol.imday.dto.UserDTO;
-import br.com.uol.imday.entities.User;
 import br.com.uol.imday.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
